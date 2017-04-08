@@ -1,8 +1,8 @@
-// 002Watki.cpp : Defines the entry point for the console application.
+// 002Wa33tki.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
-
+//Co ja to mam
 using namespace std;
 
 class demo
@@ -89,7 +89,7 @@ double gmean(double a, double b)
 double means(double a, double b)
 {
 	double am,hm,gm;
-	demo d2("z funkcji means()");
+	demo d2("Z funkcji means()");
 	am = (a + b) / 2.0;
 	try
 	{

@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "targetver.h"
+//#include "targetver.h"
 #include "exc_mean.h"
 
 #include <stdio.h>

@@ -108,41 +108,4 @@ double means(double a, double b)
 
 
 
-#ifdef example
-#include "sub_01.h"
-
-//using namespace std;
-int _tmain(int argc, _TCHAR* argv[])
-{
-	using std::string;
-	using std::cin;
-	using std::cout;
-
-	QueueTP<string>cs(5);
-	string temp;
-	while(!cs.isfull())
-	{
-		cout << "Wpisz swoje imie i nazwisko zostaniesz zadluzony/y"\
-			"wg kolejnosci przybyccia.\n"\
-			"Imie i nazwisko: ";
-		getline(std::cin,temp);
-		//string name = getline("Please enter your name: ");
-		cs.enqueue(temp);
-	}	
-
-	cout << "kolejka pelna.Rozpoczynamy przetwarzanie!\n";
-	while (!cs.isempty())
-	{
-		cs.dequeue(temp);
-		cout << "Teraz obslugujemy " << temp << "...\n";
-	
-	}
-	
-	
-	std::cout << "Prn";
-	getch();
-	return 0;
-}
-
-#endif
 

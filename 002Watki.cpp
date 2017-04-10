@@ -29,21 +29,30 @@ public:
 double hmean(double a, double b);
 double gmean(double a, double b);
 double means(double a, double b);
+int range_50_100(int inp);
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	double x,y,z;
+	int l;
 	{
 		demo d1("blok main");
 		cout << "Ready for 2:";
-		while(cin >> x >> y)
+		while(cin >> x )
 		{
 			try
 			{
-				z = means(x,y);
-				cout << "Median:" << x << " i " << y 
-					<< " wynosi " << z << endl;
+				//z = means(x,y);
+//				cout << "Median:" << x << " i " << y ;
+					//<< " wynosi " << z << endl;
+				 l = range_50_100(x);
 				cout  << "Ready for next pair:";
+			}
+			catch(my_excep & me)
+			{
+			  cout << "exception handling " <<me.mesg();
+			  break;
 			}
 			catch(bad_hmean & bg)
 			{
@@ -86,6 +95,12 @@ double gmean(double a, double b)
 	return sqrt(a*b);
 }
 
+int range_50_100(int inp)
+{
+if(inp <50 || inp >100)
+	throw my_excep(inp);
+return 2 * inp;
+}
 double means(double a, double b)
 {
 	double am,hm,gm;
@@ -105,7 +120,17 @@ double means(double a, double b)
 	d2.show();
 	return (am + hm + gm)/3.0;
 }
-
-
+/*
+void check_exc(int k)
+{
+	int resp;
+	try{
+	
+	
+	}catch()
+	{
+	
+	}
+}*/
 
 
